@@ -202,8 +202,13 @@
   environment.systemPackages = with pkgs; [
     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     wget
+    keepassxc
+    lshw
+    lshw-gui
     #binfmt
     proot
+    dig
+    dnslookup
     qemu
     neovim
     curl
@@ -287,6 +292,9 @@
   nebula03 = "ssh -i /home/quaithejedi/DB/atlona.pem -o ServerAliveInterval=5 ubuntu@nebula03.cloud.bigbang.atlona.com";
   nginx01 = "ssh -i /home/quaithejedi/DB/atlona.pem -o ServerAliveInterval=5 ubuntu@nginx01.cloud.bigbang.atlona.com";
   nginx02 = "ssh -i /home/quaithejedi/DB/atlona.pem -o ServerAliveInterval=5 ubuntu@nginx02.cloud.bigbang.atlona.com";
+  redis = "ssh -i /home/quaithejedi/DB/atlona.pem -o ServerAliveInterval=5 ubuntu@redis.cloud.bigbang.atlona.com";
+  nano = "nano -l";
+  ss = "sudo ss -tulpn | grep -i listen";
   };  
 
   # Some programs need SUID wrappers, can be configured further or are
